@@ -1,14 +1,19 @@
 number = gets.to_i
 
+t1,x1,y1 = 0,0,0
+
 judge  = "Yes"
-number.times do |s|
+
+number.times do
     s = gets
-    n = a = b = 0
-    m,x,y = s.strip.split(" ").map(&:to_i)
-    if (x + y - a - b).between?((-m - n), (m - n)) && ((m - n) - (x + y - a - b)) % 2 == 0
-        n = m
-        a = x
-        b = y
+
+    t2,x2,y2 = s.strip.split(" ").map(&:to_i)
+    t = t2 - t1
+    d = (x2 - x1).abs + (y2 - y1).abs
+    if d <= t && (t - d).even?
+        t1 = t2
+        x1 = x2
+        y1 = y2
     else
         judge = "No"
         break
