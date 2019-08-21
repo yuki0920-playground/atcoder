@@ -6,8 +6,8 @@ s1 = 0
 ws.each do |w|
     s1 += w
     if s1 >= half
-        s1 - w if (s1 - half).abs > (s1 - w - half).abs
+        s1 -= w if (s1 - half).abs > (s1 - w - half).abs
         break
     end
 end
-print 2 * s1 - full
+print (2 * s1 - full).abs
