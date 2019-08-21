@@ -1,2 +1,2 @@
-abc = gets.split(" ").map(&:to_i)
-print abc.inject(:+) - abc.max
+abc = gets.split(" ").map(&:to_i).sort
+print abc[0] + abc[1]
