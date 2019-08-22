@@ -1,3 +1,4 @@
 n,k = gets.chomp.split(" ").map(&:to_i)
-s = gets.chomp.split("").map(&:to_s)
-s.each_with_index{ |e,i| print i == k - 1 ? e.downcase : e }
+s = gets
+s[k-1] = s[k-1].downcase
+puts s
