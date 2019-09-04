@@ -1,3 +1,5 @@
-S = gets.chomp.to_s
+require 'date'
 
-print S >= "2019/04/30" ? "Heisei" : "TBD"
+s = gets
+x = Date.parse(s)
+print x >= Date.parse('2019-05-01') ? "TBD" : "Heisei"
