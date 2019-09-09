@@ -10,4 +10,4 @@ points.combination(2) do |y,z|
     dist = Math.sqrt(dist)
     count += 1 if dist - dist.to_i == 0
 end
-print count
+print sum
