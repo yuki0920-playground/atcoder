@@ -1,11 +1,7 @@
 n = gets.to_i
-sum = []
+sum = 0
 n.times do
-    a = gets.split(" ").map(&:to_s)
-    if a[1] == 'JPY'
-        sum << a[0].to_f
-    else
-        sum << a[0].to_f * 380_000
-    end
+    money,currency = gets.split(" ").map(&:to_s)
+    sum += currency == "JPY" ? money.to_f : money.to_f * 380_000
 end
-puts sum.inject(:+)
+puts sum
