@@ -7,4 +7,4 @@ while
     end
     a << s
 end
-puts a.size+ 1
+puts a.size + 1
