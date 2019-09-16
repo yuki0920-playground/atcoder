@@ -1,11 +1,10 @@
 s = gets.to_i
-a = []
-c = 1
+a = [s]
 while
     s = s.even? ? s / 2 : s * 3 + 1
-    c += 1
-    if s == 1
+    if a.include?(s)
         break
     end
+    a << s
 end
-puts c + 1
+puts a.size+ 1
