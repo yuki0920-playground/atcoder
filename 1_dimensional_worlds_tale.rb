@@ -1,5 +1,3 @@
 N,M,X,Y = gets.split(" ").map(&:to_i)
-x = gets.split(" ").map(&:to_i)
-y = gets.split(" ").map(&:to_i)
-puts (x.max < y.min && X < y.min && y.min <= Y ) ? 'No War
-' : 'War'
+x,y = 2.times.map{gets.split(" ").map(&:to_i).sort}
+puts (x.last < y.first && X < y.first && y.first <= Y ) ? 'No War' : 'War'
