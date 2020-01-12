@@ -5,12 +5,13 @@ arr = []
 num = []
 
 n.times do
-  arr << gets.chomp.to_s.split(' ')
+  arr << gets.split.map(&:to_i)
 end
 
-arr.each do |a|
-  arr.each do |b|
-    max << ((a[0].to_i - b[0].to_i).abs ** 2 + (a[1].to_i - b[1].to_i).abs ** 2)
+# ネストした繰り返しの回数を減らしている
+(0..(n-1)).each do |a|
+  ((a+1)..n-1).each do |b|
+    num << ((arr[a][0].to_i - arr[b][0].to_i).abs ** 2 + (arr[a][1].to_i - arr[b][1].to_i).abs ** 2)
   end
 end
 
