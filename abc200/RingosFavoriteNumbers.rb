@@ -1,12 +1,11 @@
 _n = gets
 input = gets.chomp.split(' ').map(&:to_i)
-num_groups = input.group_by{|num| num % 200}
+numbers = input.group_by{|num| num % 200}.values
 
-count = 0
-num_groups.each do |key, numbers|
-  next if numbers.size < 2
+count = numbers.map { |number|
+  next if number.length < 2
 
-  count += numbers.combination(2).to_a.count{|num1, num2| (num1 - num2).modulo(200) == 0}
-end
+  (number.length * (number.length - 1))/2
+}.flatten.compact.sum
 
 puts count
