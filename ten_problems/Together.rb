@@ -1,5 +1,7 @@
 _n = gets.chomp
 nums = gets.chomp.split(' ').map(&:to_i)
-puts nums.uniq.map { |uniq_num|
-  nums.partition { |num| uniq_num -1 <= num && num <= uniq_num + 1 }[0]
-}.max_by(&:size).size
+puts nums.each_with_object({}) {|num, res|
+  res[num-1].nil? ? res[num-1] = 1  : res[num-1] += 1
+  res[num].nil? ? res[num] = 1  : res[num] += 1
+  res[num+1].nil? ? res[num+1] = 1  : res[num+1] += 1
+}.values.max
