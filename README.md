@@ -40,8 +40,11 @@ n = gets.chomp.to_i
 
 - 任意の組み合わせを生成する
   - [Array#combination (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Array/i/combination.html)
-- bit の順列を返す
+- 重複順列(順序あり、重複あり)を返す
   - [Array#repeated_permutation (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Array/i/repeated_permutation.html)
+  - [Ruby Array の組み合わせ系メソッドまとめ - Qiita](https://qiita.com/shshimamo/items/5a458ecc88e7c24d5112)
+- サイズ n の組み合わせをすべて生成
+  - [Array#combination (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Array/i/combination.html)
 
 ### Numeric
 
