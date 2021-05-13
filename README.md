@@ -47,3 +47,9 @@ n = gets.chomp.to_i
 
 - 余りを求める
   - [Numeric#% (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Numeric/i/=25.html)
+
+### Enumerable
+
+- ブロックをグループ分けする
+  - [Enumerable#partition (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Enumerable/i/partition.html)
+  - [Enumerable#group_by (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Enumerable/i/group_by.html)
