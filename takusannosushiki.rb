@@ -9,6 +9,7 @@ sum = 0
   (n-1).times do |i|
     # 一致する場合に0を追加する
     if (bit & (1 << i)) == 0
+      puts "bit #{bit} 1 << i #{1 << i}"
       arr[i] = arr[i] + '+'
     end
   end

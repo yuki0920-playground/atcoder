@@ -86,6 +86,7 @@ end
   arr = nums.dup
 
   (0..(n-1)).each do |i|
+    # 複合処理
     # bit論理演算結果が0ならば一致すると判断する
     if (bit & (1 << i)) == 0
       # arr[i] ...
