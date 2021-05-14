@@ -56,3 +56,54 @@ n = gets.chomp.to_i
 - ブロックをグループ分けする
   - [Enumerable#partition (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Enumerable/i/partition.html)
   - [Enumerable#group_by (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Enumerable/i/group_by.html)
+
+## ビット全探索
+
+- ビット二項演算子。論理積を計算する
+  - [Integer#& (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Integer/i/=26.html)
+- bits だけビットを左にシフトします
+  - [Integer#<< (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Integer/i/=3c=3c.html)
+- bits だけビットを右にシフトする
+  - [Integer#>> (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Integer/i/=3e=3e.html)
+
+### 処理
+
+#### 王道
+
+```rb
+n = 2
+# n bit だけビットを左にシフトするので2^n乗
+(1 << n).times do |bit|
+  puts bit
+end
+
+#=> 0 1 2 3
+```
+
+```rb
+# n bit だけビットを左にシフトするので2^n乗
+(1 << n).times do |bit|
+  arr = nums.dup
+
+  (0..(n-1)).each do |i|
+    # bit論理演算結果が0ならば一致すると判断する
+    if (bit & (1 << i)) == 0
+      # arr[i] ...
+    end
+  end
+end
+```
+
+#### ビーッと配列利用
+
+```rb
+[0, 1].repeated_permutation(n) do |bits|
+  arr = nums.dup
+
+  (0..n-1).each do |index|
+    if bits[index] == 1
+      # arr[index] ...
+    end
+  end
+end
+```

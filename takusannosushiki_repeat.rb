@@ -11,7 +11,6 @@ sum = 0
   end
 
   arr_sum = eval arr.join
-  print arr
   sum += arr_sum
 end
 
