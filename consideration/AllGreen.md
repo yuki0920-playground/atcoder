@@ -1,5 +1,7 @@
 # ABC104 C - AllGreen
 
+https://atcoder.jp/contests/abc104/tasks/abc104_c
+
 ## 考察
 
 - 問題を解くかどうかの組み合わせは 2^(p1...pd)乗通りある
