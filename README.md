@@ -9,11 +9,11 @@
 gets.chomp.to_i
 
 # 1行で複数の数値
-gets.chomp.split(' ').map(&:to_i)
+gets.chomp.split.map(&:to_i)
 
 # nで行数を取得し、配列にする
 n = gets.chomp.to_i
-(1..n).map { |_n| gets.chomp.to_i }
+Array.new(n) { gets.chomp.to_i }
 ```
 
 ### ポイント
