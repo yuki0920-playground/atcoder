@@ -15,18 +15,11 @@ MEMO = Hash.new { |h,k| h[k] = {} }
     value = input[i][1]
 
     if (w - weight) >= 0
-      # なぜmaxが必要なのかの検証
-      if [MEMO[i][w - weight].to_i + value, MEMO[i][w].to_i].max != MEMO[i][w - weight].to_i + value
-        print "i #{i} w #{w} \n"
-        print "#{MEMO[i]}"
-        # print MEMO
-      end
+      # MEMO[i][w - weight].to_i + value はおもりを追加した場合
+      # MEMO[i][w] はおもりを追加した場合
       MEMO[i + 1][w] = [MEMO[i][w - weight].to_i + value, MEMO[i][w].to_i].max
     else
       MEMO[i + 1][w] = MEMO[i][w].to_i
     end
   end
 end
-
-# puts MEMO[N][W]
-# print MEMO
