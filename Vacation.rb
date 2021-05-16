@@ -8,7 +8,9 @@ MEMO[0][0] = 0
 days.each_with_index do |day, i|
   day.each_with_index do |d, j|
     prev = [0, 1, 2] - [j]
-    MEMO[i + 1][j] = prev.map { |k| MEMO[i][k].to_i + d }.max
+    prev.each do |k|
+      MEMO[i + 1][j] = [MEMO[i + 1][j].to_i, MEMO[i][k].to_i + d].max
+    end
   end
 end
 
