@@ -11,3 +11,7 @@ https://atcoder.jp/contests/abc201/tasks/abc201_c
 
 - 組み合わせ的に解く方法も存在する
   https://blog.hamayanhamayan.com/entry/2021/05/15/235640
+
+## タグ
+
+- 全探索
