@@ -20,7 +20,7 @@ DP[0][0] = true
   (0..W).each do |j|
     DP[i + 1][j] = true if DP[i][j]
     # 重量wを追加する場合も個数iのコストなしでよい
-    DP[i + 1][j + problems[i]] = true if DP[i + 1][j]
+    DP[i + 1][j + problems[i]] = true if DP[i + 1][j] && j + problems[i] <= W
   end
 end
 print DP
