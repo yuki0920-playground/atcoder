@@ -133,8 +133,13 @@ puts DP[X][Y]
 ### DP 初期化
 
 ```rb
-DP = {}
-DP = Hash.new { |h,k| h[k] = {} }
+# 配列初期化が早い
+dp = Array.new(N + 1) { Array.new(W + 1) {0}}
+
+
+# ハッシュのほうがわかりやすいが遅い
+dp = {}
+dp = Hash.new { |h,k| h[k] = {} }
 ```
 
 ### 考え方
