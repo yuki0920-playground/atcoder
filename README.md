@@ -45,6 +45,9 @@ Array.new(n) { gets.chomp.to_i }
   - [Ruby Array の組み合わせ系メソッドまとめ - Qiita](https://qiita.com/shshimamo/items/5a458ecc88e7c24d5112)
 - サイズ n の組み合わせをすべて生成
   - [Array#combination (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Array/i/combination.html)
+- ソート済み配列(reverse はだめ)のインデックスや値を返す
+  - [Array#bsearch_index (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Array/i/bsearch_index.html)
+  - [Array#bsearch (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Array/i/bsearch.html)
 
 ### Numeric
 
