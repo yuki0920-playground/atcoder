@@ -145,6 +145,26 @@ dp = {}
 dp = Hash.new { |h,k| h[k] = {} }
 ```
 
+## 同じものの組み合わせ数
+
+```rb
+# 階乗計算
+def factorial(n)
+  i = 0
+  k = 1
+  while i < n
+    k *= i + 1
+    i += 1
+  end
+  k
+end
+
+# 同じものの組み合わせ
+def comb(a,b)
+  factorial(a) / (factorial(a-b) * factorial(b))
+end
+```
+
 ### 考え方
 
 - 部分問題にどう分割できるかを決める(ノートとペンを使う)
